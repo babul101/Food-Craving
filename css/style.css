@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: Pacifico;
+  font-size: 24px;
+  line-height: 1.25;
+  background-color: #ffffff;
+  color: #000000;
+}
+header {
+  background-color: #f2dd00;
+  padding: 48px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+    max-width: 265px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 0 0 24px;
+    color:  #000000;
+}
+section {
+  padding: 96px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 96px;
+  max-width: 10em;
+
+  margin: 0 auto 0 auto;
+}
+
+figure {
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+}
+
+section.first-section {
+  background-color: #f2dd00;
+}
+
+section.third-section {
+  background-color: #f09291;
+}
+
+section.fifth-section {
+  background-color: #bee3f8;
+}
