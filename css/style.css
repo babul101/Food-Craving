@@ -7,6 +7,11 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+
+main {
+  border: 10px solid red;
+  
+}
 header {
   background-color: #f2dd00;
   padding: 48px;
