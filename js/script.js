@@ -1,5 +1,6 @@
 const mainTag = document.querySelector("main");
 const bodyTag = document.querySelector("body");
+const figCaptions = document.querySelectorAll('figcaption')
 
 const motion = window.matchMedia("(prefers-reduced-motion:no-preference)");
 const large = window.matchMedia("(min-width:600px)");
@@ -12,6 +13,22 @@ if (motion.matches && large.matches) {
   mainTag.style.left = "0px";
 
   mainTag.style.width = "100%";
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.intersectionRatio > 0.25){
+        entry.target.classList.add('in-view')
+      }else {
+        entry.target.classList.remove('in-view')
+      }
+    })
+  },{
+    threshold:[0,0.25,1]
+  })
+
+  figCaptions.forEach(caption => {
+    observer.observe(caption)
+  })
 
   let currentScroll = 0;
   let aimScroll = 0;
