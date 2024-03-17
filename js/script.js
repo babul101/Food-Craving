@@ -36,7 +36,18 @@ if (motion.matches && large.matches) {
   const changeScroll = function () {
     bodyTag.style.height = mainTag.offsetHeight + "px";
     currentScroll = currentScroll + (aimScroll - currentScroll) * 0.05;
-    mainTag.style.top = -1 * currentScroll + "px";
+    mainTag.style.top = (-1 * currentScroll) + "px";
+    figCaptions.forEach(caption => {
+      const box = caption.getBoundingClientRect()
+      const midY = box.y + box.height/2
+      const midScreen = window.innerHeight/2
+      const diff = midY - midScreen
+      const images = caption.querySelectorAll('img')
+      images.forEach((image,index) => {
+        const speed = 0.1 + 0.05 * index
+        image.style.top = (diff * speed) + 'px'
+      })
+    })
     requestAnimationFrame(changeScroll);
   };
 

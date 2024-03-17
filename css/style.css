@@ -8,7 +8,6 @@ body {
   color: #000000;
 }
 
-
 header {
   background-color: #f2dd00;
   padding: 48px;
@@ -18,17 +17,17 @@ header {
 }
 
 header h1 {
-    max-width: 265px;
+  max-width: 265px;
 }
 
 header nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 header nav a {
-    margin: 0 0 0 24px;
-    color:  #000000;
+  margin: 0 0 0 24px;
+  color: #000000;
 }
 section {
   padding: 96px;
@@ -53,13 +52,12 @@ figcaption {
   top: 70%;
   left: 100%;
   width: 50%;
-
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   
 }
 
 figcaption::before {
-  content: '';
+  content: "";
   display: block;
   padding: 160% 0 0 0;
 }
@@ -82,11 +80,11 @@ figcaption.in-view img {
   opacity: 1;
 }
 
-figcaption img:nth-child(even){
+figcaption img:nth-child(even) {
   transition-delay: 1s;
 }
 
-figcaption img:nth-child(odd){
+figcaption img:nth-child(odd) {
   transition-delay: 1.5s;
 }
 
