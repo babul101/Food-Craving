@@ -28,6 +28,22 @@ header nav {
 header nav a {
   margin: 0 0 0 24px;
   color: #000000;
+  text-decoration: none;
+  position: relative;
+  padding: 0 0 16px 0;
+}
+
+header nav a img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0,0 100%, 0 100%,0 0);
+  transition: clip-path 0.5s;
+}
+
+header nav a:hover img {
+  clip-path: polygon(0 0, 0 100%, 100% 100%,100% 0);
 }
 section {
   padding: 96px;
@@ -53,7 +69,6 @@ figcaption {
   left: 100%;
   width: 50%;
   transform: translate(-50%, -50%);
-  
 }
 
 figcaption::before {
